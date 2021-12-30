@@ -7,8 +7,6 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
 
 import './charInfo.scss';
-import { Link } from 'react-router-dom';
-
 
 const CharInfo = (props) => {
 

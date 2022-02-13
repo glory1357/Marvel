@@ -12,16 +12,12 @@ const setContent = (process,Component, newItemLoading) => {
     switch (process) {
         case 'waiting':
             return <Spinner/>
-            break;
         case 'loading':
             return newItemLoading ? <Component/> : <Spinner/>
-            break;
         case 'confirmed':
             return <Component/>
-            break;
         case "error":
             return <ErrorMessage/>
-            break;
         default:
             throw new Error('Unexpected process state')
     }
@@ -34,7 +30,7 @@ const CharList = (props) => {
     const [offset, setOffset] = useState(210);
     const [charEnded, setCharEnded] = useState(false);
     
-    const {loading, error, getAllCharacters, process, setProcess} = useMarvelService();
+    const {getAllCharacters, process, setProcess} = useMarvelService();
 
     useEffect(() => {
         onRequest(offset, true);
